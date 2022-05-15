@@ -18,3 +18,20 @@ start_btn.onclick = () => {
 quit_btn.onclick = () => {
     container.classList.remove("activeInfo");
 }
+
+next_btn.onclick = ()=>{
+    container.classList.remove("activeInfo");
+    quiz_box.classList.add("activeQuiz");
+    showQuestions(0);
+    questionCounter(1);
+    startTimer(60);
+    startTimeLine(0);
+}
+
+let timeValue = 60;
+let questionCount = 0;
+let questionNumber = 1;
+let userScore = 0;
+let counter;
+let counterLine;
+let widthValue = 0;
