@@ -1,92 +1,92 @@
 //selecting all required elements
 const start_btn = document.querySelector(".start_btn button");
-const container = document.querySelector(".container");
-const quit_btn = container.querySelector(".buttons .quit");
-const next_btn = container.querySelector(".buttons .next_btn");
+const details = document.querySelector(".details");
+const exit_btn = details.querySelector(".buttons .quit");
+const continue_btn = details.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
-const results_box = document.querySelector(".results_box");
-const option_list = document.querySelector("option_list");
+const result_box = document.querySelector(".result_box");
+const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-//start button
-start_btn.onclick = () => {
-    container.classList.add("activeInfo");
+
+
+start_btn.onclick = ()=>{
+    details.classList.add("activeInfo");
 }
 
-//exit button
-quit_btn.onclick = () => {
-    container.classList.remove("activeInfo");
+exit_btn.onclick = ()=>{
+    details.classList.remove("activeInfo");
 }
 
-next_btn.onclick = ()=>{
-    container.classList.remove("activeInfo");
-    quiz_box.classList.add("activeQuiz");
-    showQuestions(0);
+
+continue_btn.onclick = ()=>{
+    details.classList.remove("activeInfo"); //hide details
+    quiz_box.classList.add("activeQuiz"); 
+    showQuetions(0); 
     questionCounter(1);
-    startTimer(60);
-    startTimeLine(0);
+    startTimer(60); 
+    startTimerLine(0); 
 }
 
-let timeValue = 60;
-let questionCount = 0;
-let questionNumber = 1;
+let timeValue =  60;
+let question_count = 0;
+let question_numb = 1;
 let userScore = 0;
 let counter;
 let counterLine;
 let widthValue = 0;
 
-const restart_quiz = results_box.querySelector(".buttons .restart");
-const quit_quiz = results_box.querySelector(".buttons .quit");
+const restart_quiz = result_box.querySelector(".buttons .restart");
+const quit_quiz = result_box.querySelector(".buttons .quit");
 
-//next quiz button
-
-restart_quiz.onclick = () =>{
-    quiz_box.classList.add("activeQuiz");
-    results_box.classList.remove("activeResults");
-
-    timeValue = 60;
-    questionCount = 0;
-    questionNumber = 1;
+// if restartQuiz button clicked
+restart_quiz.onclick = ()=>{
+    quiz_box.classList.add("activeQuiz"); //show quiz box
+    result_box.classList.remove("activeResult"); //hide result box
+    timeValue = 60; 
+    question_count = 0;
+    question_numb = 1;
     userScore = 0;
     widthValue = 0;
-    showQuestions(questionCount);
-    questionCounter(questionNumber);
-    clearInterval(counter);
-    clearInterval(counterLine);
-    startTimer(timeValue);
-    startTimeLine(widthValue);
-    timeText.textContent = "Time Left";
-    next_btn.classList.remove("show");
+    showQuetions(question_count); //calling showQestions function
+    queCounter(question_numb); //passing que_numb value to queCounter
+    clearInterval(counter); //clear counter
+    clearInterval(counterLine); //clear counterLine
+    startTimer(timeValue); //calling startTimer function
+    startTimerLine(widthValue); //calling startTimerLine function
+    timeText.textContent = "Time Left"; //change the text of timeText to Time Left
+    next_btn.classList.remove("show"); //hide the next button
 }
 
+// if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
-    window.location.reload();//relaod current window
+    window.location.reload(); //reload the current window
 }
 
 const next_btn = document.querySelector("footer .next_btn");
-const bottom_question_counter = document.querySelector("footer .total_question");
+const bottom_ques_counter = document.querySelector("footer .total_question");
 
-//next quiz button action when clicked
 
 next_btn.onclick = ()=>{
-    if(questionCount < questions.length - 1){
-        questionCount++;
-        questionNumber++;
-        showQuestions(questionCount);
-        questionCounter(questionNumber);
-        clearInterval(counter);
-        clearInterval(counterLine);
-        startTimer(timeValue);
-        startTimeLine(widthValue);
-        timeText.textContent = "Time Left";
+    if(question_count < questions.length - 1){
+        question_count++; 
+        question_numb++; 
+        showQuetions(question_count); 
+        queCounter(question_numb); 
+        clearInterval(counter); 
+        clearInterval(counterLine); 
+        startTimer(timeValue); //calling startTimer function
+        startTimerLine(widthValue);
+        timeText.textContent = "Time Left"; 
         next_btn.classList.remove("show");
     }else{
-        clearInterval(counter);
+        clearInterval(counter); //clear counter
         clearInterval(counterLine);
-        showResults();//calling showResult function
+        showResult(); //calling showResult function
     }
 }
+
 // getting questions and answers from the array
 function showQuetions(index){
     const question_text = document.querySelector(".question_text");
