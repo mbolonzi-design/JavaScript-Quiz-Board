@@ -82,4 +82,4 @@ SOFTWARE.
 
 ## Authors Info
 
-Linked - [Peter Mbolonzi](https://www.linkedin.com/in/peter-mbolonzi-ab5179152/)
+LinkedIn - [Peter Mbolonzi](https://www.linkedin.com/in/peter-mbolonzi-ab5179152/)
