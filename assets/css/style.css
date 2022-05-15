@@ -224,3 +224,19 @@ footer .total-questions span p{
 footer .total-questions span p:first-child{
     padding: 0px;
 }
+footer button{
+    height: 40px;
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: 300;
+    cursor: pointer;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
