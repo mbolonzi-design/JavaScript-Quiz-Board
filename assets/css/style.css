@@ -176,7 +176,14 @@ section .option-list .option:hover{
     border: 1px solid #b8daff;
 }
 section .option-list .option.correct{
-    color: #a52a2a;
+    color: #00ff00;
     background-color: #f8d7da;
     border: 2px solid #f6c6cb;
 }
+
+/* section .option-list .option.disabled{
+    pointer-events: none;
+}
+section .option-list .option .icon{
+
+} */
