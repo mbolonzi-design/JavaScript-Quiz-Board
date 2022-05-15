@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/9ed9766269.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Teremi JavaScript Test</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9ed9766269.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>JavaScript Quiz Board</title>
 </head>
 <body>
-    <!--start quiz button-->
-    <div class="start_btn"><button>Start Quiz</button></div>
-    <!--quiz rules-->
-    <div class="container">
-        <div class="test_rules"><span>Test Rules</span></div>
-        <div class="rules_list">
-            <div class="rules">1. You will have <span>60 seconds</span>per question.</div>
-            <div class="rules">2. Each question will only have one attempt.</div>
-            <div class="rules">3. Points are awarded based on correct answers given.</div>
-        </div>
-        <div class="buttons">
-            <button class="quit_btn">Exit Quiz</button>
-            <button class="next_btn">Next</button>
-        </div>
-    </div>
-    <!--quiz box-->
-    <div class="quiz_box">
-        <header>
-            <div class="title">JS Quiz Application</div>
-            <div class="timer">
-                <div class="time_left_txt">Time Left</div>
-                <div class="timer_sec">60</div>
-            </div>
-            <div class="time_line"></div>
-        </header>
-        <section>
-            <div class="quiz_text">
-                <!--Update test questions from  JavaScript file-->
-            </div>
-            <div class="option_list">
-                <!--Update options from the JavaScript file-->
-            </div>
-        </section>
-        <!--footer section-->
-        <footer>
-            <div class="total_questions">
-                <!--get question counter  from js files-->
-                <button class="next_btn">Next Question</button>
-            </div>
-        </footer>
-    </div>
-    <!--results container-->
-    <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_txt">You have completed the Test.</div>
-        <div class="score_txt">
-            <!--test results are updated from the js files-->
-        </div>
-        <div class="buttons">
-            <button class="restart">Restart Test</button>
-            <button class="quit">Quit Test</button>
-        </div>
-    </div>
-    <!--linking js file for the question-->
-    <script src="./assets/pages/js/quiz.js"></script>
-    <script src="./assets/pages/js/app.js"></script>
+  <!-- start Quiz button -->
+  <div class="start_btn"><button>Start Quiz</button></div>
+  <!-- Info Box -->
+  <div class="details">
+      <div class="desc-title"><span>Quiz Rules</span></div>
+      <div class="desc-list">
+          <div class="desc">1. You will have only <span>60 seconds</span> per each question.</div>
+          <div class="desc">2. Once you select your answer, it can't be undone.</div>
+          <div class="desc">4. Points are awarded based on your correct answers.</div>
+      </div>
+      <div class="buttons">
+          <button class="quit">Exit Quiz</button>
+          <button class="restart">Next</button>
+      </div>
+  </div>
+  <!-- Quiz Box -->
+  <div class="quiz_box">
+      <header>
+          <div class="title">JavaScript Quiz Test</div>
+          <div class="timer">
+              <div class="time_left_txt">Time Left</div>
+              <div class="timer_sec">60</div>
+          </div>
+          <div class="time_line"></div>
+      </header>
+      <section>
+          <div class="question_text">
+              <!-- Here I've inserted question from JavaScript -->
+          </div>
+          <div class="option_list">
+              <!-- Here I've inserted options from JavaScript -->
+          </div>
+      </section>
+      <!-- footer of Quiz Box -->
+      <footer>
+          <div class="total_questions">
+              <!-- Here I've inserted Question Count Number from JavaScript -->
+          </div>
+          <button class="next_btn">Next Question</button>
+      </footer>
+  </div>
+  <!-- Result Box -->
+  <div class="result_box">
+      <div class="icon">
+          <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete_text">You've completed the Quiz!</div>
+      <div class="score_text">
+          <!-- Here I've inserted Score Result from JavaScript -->
+      </div>
+      <div class="buttons">
+          <button class="restart">Restart Quiz</button>
+          <button class="quit">Quit Quiz</button>
+      </div>
+  </div>
+  <script src="./assets/pages/js/quiz.js"></script>
+  <script src="./assets/pages/js/app.js"></script>
+
 </body>
 </html>
