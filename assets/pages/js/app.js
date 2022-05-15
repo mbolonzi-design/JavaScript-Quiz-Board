@@ -59,3 +59,31 @@ restart_quiz.onclick = () =>{
     timeText.textContent = "Time Left";
     next_btn.classList.remove("show");
 }
+
+quit_quiz.onclick = ()=>{
+    window.location.reload();//relaod current window
+}
+
+const next_btn = document.querySelector("footer .next_btn");
+const bottom_question_counter = document.querySelector("footer .total_question");
+
+//next quiz button action when clicked
+
+next_btn.onclick = ()=>{
+    if(questionCount < questions.length - 1){
+        questionCount++;
+        questionNumber++;
+        showQuestions(questionCount);
+        questionCounter(questionNumber);
+        clearInterval(counter);
+        clearInterval(counterLine);
+        startTimer(timeValue);
+        startTimeLine(widthValue);
+        timeText.textContent = "Time Left";
+        next_btn.classList.remove("show");
+    }else{
+        clearInterval(counter);
+        clearInterval(counterLine);
+        showResults();//calling showResult function
+    }
+}
