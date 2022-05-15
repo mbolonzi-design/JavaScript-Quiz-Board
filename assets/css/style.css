@@ -209,3 +209,18 @@ section .option-list .option .icon{
     background-color: #f8d7da;
     border-color: #a43835;
 }
+footer{
+    height: 60px;
+    padding: 0 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid lightgray;
+}
+footer .total-questions span p{
+    font-weight: 500;
+    padding: 0 5px;
+}
+footer .total-questions span p:first-child{
+    padding: 0px;
+}
