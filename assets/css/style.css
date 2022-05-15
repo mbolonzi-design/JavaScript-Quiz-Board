@@ -167,3 +167,16 @@ section .option-list .option{
     justify-content: space-between;
     align-items: center;
 }
+section .option-list .option:last-child{
+    margin-bottom: 0px;
+}
+section .option-list .option:hover{
+    color: #004085;
+    background-color: #cce8ff;
+    border: 1px solid #b8daff;
+}
+section .option-list .option.correct{
+    color: #a52a2a;
+    background-color: #f8d7da;
+    border: 2px solid #f6c6cb;
+}
