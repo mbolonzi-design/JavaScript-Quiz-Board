@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    background-color: #f0ffff;
+}
+::selection{
+    color: #ffffff;
+    background-color: #f0ffff;
+}
+.start-btn, .container, .quiz-box, .results-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3), 0 5px 20px 0 rgba(0,0,0,0.2);
+}
