@@ -12,20 +12,20 @@ body{
     color: #ffffff;
     background-color: #f0ffff;
 }
-.start-btn, .container, .quiz-box, .results-box {
+.start_btn, .container, .quiz_box, .results_box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3), 0 5px 20px 0 rgba(0,0,0,0.2);
 }
-.container.activeInfo, .quiz-box.activeQuiz, .results-box.activeResult {
+.container.activeInfo, .quiz_box.activeQuiz, .results_box.activeResult {
     opacity: 1;
     z-index: 5;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
-.start-btn button{ 
+.start_btn button{ 
     font-size: 20px;
     font-weight: 700;
     color: #007bff;
@@ -45,7 +45,7 @@ body{
     pointer-events: none;
     transition: all 0.5s ease;
 }
-.container, .test-rules{
+.container, .test_rules{
     height: 80px;
     width: 100%;
     border-bottom: 2px solid grey;
@@ -57,14 +57,14 @@ body{
     font-size: 20px;
     font-weight: 700;
 }
-.container .rules-list{
+.container .rules_list{
     padding: 15px 30px;
 }
 .container rules-list .rules{
     margin: 5px 0;
     font-size: 18px;
 }
-.container, .rules-list, .rules span{
+.container, .rules_list, .rules span{
     font-weight: 700;
     color: #007bff;
 }
@@ -81,7 +81,7 @@ body{
     border: 2px solid #007bff;
     transition: all 0.5s ease;
 }
-.quiz-box{
+.quiz_box{
     width: 600px;
     background: #ffffff;
     border-radius: 5px;
@@ -90,7 +90,7 @@ body{
     pointer-events: none;
     transition: all 0.5s ease;
 }
-.quiz-box header{
+.quiz_box header{
     position: relative;
     z-index: 2;
     height: 70px;
@@ -102,12 +102,12 @@ body{
     align-items: center;
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.1);
 }
-.quiz-box, header, .title{
+.quiz_box, header, .title{
     font-size: 20px;
     font-weight: 500;
     padding-bottom: 20px;
 }
-.quiz-box, header, .timer{
+.quiz_box, header, .timer{
     color: #004085;
     background-color: #cce5ff;
     border: 1px solid #b8daff;
@@ -119,12 +119,12 @@ body{
     align-items: center;
     width: 150px;
 }
-.quiz-box, header, .timer, .time-left-txt{
+.quiz_box, header, .timer, .time_left_txt{
     font-size: 500;
     font-size: 16px;
     user-select: none;
 }
-.quiz-box, header, .timer, .timer-sec{
+.quiz_box, header, .timer, .timer_sec{
     font-size: 16px;
     font-weight: 500;
     height: 28px;
@@ -136,7 +136,7 @@ body{
     background-color: #343a42;
     user-select: none;
 }
-.quiz-box, header, .time-line{
+.quiz_box, header, .time_line{
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -147,7 +147,7 @@ section{
     padding: 25px 30px 20px 30px;
     background-color: #ffffff;
 }
-section, .quiz-text{
+section, .quiz_text{
     font-size: 24px;
     font-weight: 500;
 }
@@ -155,7 +155,7 @@ section, .option-list{
     padding: 20px 0px;
     display: block;
 }
-section .option-list .option{
+section .option_list .option{
     background: aliceblue;
     border: 1px solid #84c5fe;
     border-radius: 5px;
@@ -167,28 +167,28 @@ section .option-list .option{
     justify-content: space-between;
     align-items: center;
 }
-section .option-list .option:last-child{
+section .option_list .option:last-child{
     margin-bottom: 0px;
 }
-section .option-list .option:hover{
+section .option_list .option:hover{
     color: #004085;
     background-color: #cce8ff;
     border: 1px solid #b8daff;
 }
-section .option-list .option.correct{
+section .option_list .option.correct{
     color: #00ff00;
     background-color: #f8d7da;
     border: 2px solid #f6c6cb;
 }
-section .option-list .option.incorrect{
+section .option_list .option.incorrect{
     color:#721c25;
     background-color: #d4edda;
     border: 1px solid #c3e6cb;
 }
-section .option-list .option.disabled{
+section .option_list .option.disabled{
     pointer-events: none;
 }
-section .option-list .option .icon{
+section .option_list .option .icon{
     height: 28px;
     width: 28px;
     border: 2px solid transparent;
@@ -199,12 +199,12 @@ section .option-list .option .icon{
     transition: all 0.4s ease;
     line-height: 25px;
 }
-.option-list .option .icon.tick{
+.option_list .option .icon.tick{
     color: #24903c;
     border-color: #24903c;
     background-color: #d4edda;
 }
-.option-list .option .icon.cross{
+.option_list .option .icon.cross{
     color: #a43835;
     background-color: #f8d7da;
     border-color: #a43835;
@@ -217,11 +217,11 @@ footer{
     align-items: center;
     border-top: 1px solid lightgray;
 }
-footer .total-questions span p{
+footer .total_questions span p{
     font-weight: 500;
     padding: 0 5px;
 }
-footer .total-questions span p:first-child{
+footer .total_questions span p:first-child{
     padding: 0px;
 }
 footer button{
@@ -248,7 +248,7 @@ footer button.show{
     pointer-events: auto;
     transform: scale(1);
 }
-.results-box{
+.results_box{
     background-color: #ffffff;
     border-radius: 5px;
     display: flex;
@@ -262,30 +262,30 @@ footer button.show{
     pointer-events: none;
     transition: all 0.4s ease;
 }
-.results-box .icon{
+.results_box .icon{
     font-size: 100px;
     color: #007bff;
     margin-bottom: 15px;
 }
-.results-box .complete-txt{
+.results_box .complete_txt{
     font-size: 20px;
     font-weight: 500;
 }
-.results-box .score-txt span{
+.results_box .score_txt span{
     display: flex;
     margin: 10px 0;
     font-size: 16px;
     font-weight: 500;
 }
-.results-box .score-txt span p{
+.results_box .score_txt span p{
     padding: 0 8px;
     font-weight: 700;
 }
-.results-box .buttons{
+.results_box .buttons{
     display: flex;
     margin: 20px 0;
 }
-.results-box .buttons button{
+.results_box .buttons button{
     margin: 0 12px;
     height: 50px;
     padding: 0 20px;
