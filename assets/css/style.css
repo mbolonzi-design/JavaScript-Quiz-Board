@@ -107,3 +107,15 @@ body{
     font-weight: 500;
     padding-bottom: 20px;
 }
+.quiz-box, header, .timer{
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    height: 50px;
+    padding: 0 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
