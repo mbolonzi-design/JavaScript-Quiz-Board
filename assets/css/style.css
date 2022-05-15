@@ -119,3 +119,27 @@ body{
     align-items: center;
     width: 150px;
 }
+.quiz-box, header, .timer, .time-left-txt{
+    font-size: 500;
+    font-size: 16px;
+    user-select: none;
+}
+.quiz-box, header, .timer, .timer-sec{
+    font-size: 16px;
+    font-weight: 500;
+    height: 28px;
+    width: 50px;
+    color: #ffffff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #343a42;
+    user-select: none;
+}
+.quiz-box, header, .time-line{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 4px;
+    background-color: #007bff;
+}
