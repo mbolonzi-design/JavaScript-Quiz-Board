@@ -240,3 +240,11 @@ footer button{
     pointer-events: none;
     transition: all 0.4s ease;
 }
+footer button:hover{
+    color: #004085;
+}
+footer button.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
