@@ -36,3 +36,12 @@ body{
     background-color: #ffffff;
     cursor: pointer;
 }
+.container{
+    width: 600px;
+    background: #ffffff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
