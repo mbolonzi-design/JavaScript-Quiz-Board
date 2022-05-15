@@ -107,3 +107,34 @@ function showQuetions(index){
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
 }
+
+let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
+let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
+
+function optionSelected(answer){
+    clearInterval(counter); //clears counter
+    clearInterval(counterLine);
+    let userAns = answer.textContent; //gets user selected option
+    let correcAns = questions[que_count].answer; //gets correct answer from array
+    const allOptions = option_list.children.length; 
+    
+    if(userAns == correcAns){
+        userScore += 1; //upgrading score value with 1
+        answer.classList.add("correct");
+        answer.insertAdjacentHTML("beforeend", tickIconTag);
+        console.log("Correct Answer");
+        console.log("Your correct answers = " + userScore);
+    }else{
+        answer.classList.add("incorrect");
+        answer.insertAdjacentHTML("beforeend", crossIconTag);
+        console.log("Wrong Answer");
+
+        for(i=0; i < allOptions; i++){
+            if(option_list.children[i].textContent == correcAns){ 
+                option_list.children[i].setAttribute("class", "option correct");
+                option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag);
+                console.log("Auto selected correct answer.");
+            }
+        }
+    }
+}
