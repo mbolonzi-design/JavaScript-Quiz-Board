@@ -12,12 +12,27 @@
     <div class="start-btn"><button>Start Quiz</button></div>
     <!--quiz rules-->
     <div class="container">
-        <div class="title"><span>Test Rules</span></div>
+        <div class="test-rules"><span>Test Rules</span></div>
         <div class="rules-list">
             <div class="rules">1. You will have <span>60 seconds</span>per question.</div>
             <div class="rules">2. Each question will only have one attempt.</div>
             <div class="rules">3. Points are awarded based on correct answers given.</div>
         </div>
+        <div class="buttons">
+            <button class="quit-btn">Exit Quiz</button>
+            <button class="next-btn">Next</button>
+        </div>
+    </div>
+    <!--quiz box-->
+    <div class="quiz-box">
+        <header>
+            <div class="title">JS Quiz Application</div>
+            <div class="timer">
+                <div class="time-left-txt">Time Left</div>
+                <div class="timer-sec">60</div>
+            </div>
+            <div class="time-line"></div>
+        </header>
     </div>
     <script src="./assets/pages/js/quiz.js"></script>
     <script src="./assets/pages/js/app.js"></script>
