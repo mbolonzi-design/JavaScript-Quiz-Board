@@ -35,3 +35,27 @@ let userScore = 0;
 let counter;
 let counterLine;
 let widthValue = 0;
+
+const restart_quiz = results_box.querySelector(".buttons .restart");
+const quit_quiz = results_box.querySelector(".buttons .quit");
+
+//next quiz button
+
+restart_quiz.onclick = () =>{
+    quiz_box.classList.add("activeQuiz");
+    results_box.classList.remove("activeResults");
+
+    timeValue = 60;
+    questionCount = 0;
+    questionNumber = 1;
+    userScore = 0;
+    widthValue = 0;
+    showQuestions(questionCount);
+    questionCounter(questionNumber);
+    clearInterval(counter);
+    clearInterval(counterLine);
+    startTimer(timeValue);
+    startTimeLine(widthValue);
+    timeText.textContent = "Time Left";
+    next_btn.classList.remove("show");
+}
