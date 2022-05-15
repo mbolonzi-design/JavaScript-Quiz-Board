@@ -180,7 +180,11 @@ section .option-list .option.correct{
     background-color: #f8d7da;
     border: 2px solid #f6c6cb;
 }
-
+section .option-list .option.incorrect{
+    color:#721c25;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
 /* section .option-list .option.disabled{
     pointer-events: none;
 }
