@@ -45,7 +45,7 @@ body{
     pointer-events: none;
     transition: all 0.5s ease;
 }
-.container, .test-title{
+.container, .test-rules{
     height: 80px;
     width: 100%;
     border-bottom: 2px solid grey;
@@ -56,4 +56,15 @@ body{
     border-radius: 5px 5px 0 0;
     font-size: 20px;
     font-weight: 700;
+}
+.container .rules-list{
+    padding: 15px 30px;
+}
+.container rules-list .rules{
+    margin: 5px 0;
+    font-size: 18px;
+}
+.container, .rules-list, .rules span{
+    font-weight: 700;
+    color: #007bff;
 }
