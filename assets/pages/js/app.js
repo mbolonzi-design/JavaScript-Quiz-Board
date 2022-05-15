@@ -137,4 +137,29 @@ function optionSelected(answer){
             }
         }
     }
+    for(i=0; i < allOptions; i++){
+        option_list.children[i].classList.add("disabled");
+    }
+    next_btn.classList.add("show"); //show the next button if an option is selected
 }
+
+function showResult(){
+    info_box.classList.remove("activeInfo"); 
+    quiz_box.classList.remove("activeQuiz");
+    result_box.classList.add("activeResult");
+    const scoreText = result_box.querySelector(".score_text");
+    if (userScore > 3){ 
+        
+        let scoreTag = '<span>and congrats! , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag; 
+    }
+    else if(userScore > 1){ 
+        let scoreTag = '<span>and great , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else{ 
+        let scoreTag = '<span>and sorry , You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        scoreText.innerHTML = scoreTag;
+    }
+}
+
