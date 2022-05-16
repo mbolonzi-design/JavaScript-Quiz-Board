@@ -40,23 +40,23 @@ let widthValue = 0;
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 
-// if restartQuiz button clicked
+
 restart_quiz.onclick = ()=>{
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    result_box.classList.remove("activeResult"); //hide result box
+    quiz_box.classList.add("activeQuiz"); 
+    result_box.classList.remove("activeResult"); 
     timeValue = 60; 
     question_count = 0;
     question_numb = 1;
     userScore = 0;
     widthValue = 0;
     showQuetions(question_count); //calling showQestions function
-    queCounter(question_numb); //passing que_numb value to queCounter
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
-    startTimer(timeValue); //calling startTimer function
-    startTimerLine(widthValue); //calling startTimerLine function
-    timeText.textContent = "Time Left"; //change the text of timeText to Time Left
-    next_btn.classList.remove("show"); //hide the next button
+    queCounter(question_numb); 
+    clearInterval(counter); 
+    clearInterval(counterLine); 
+    startTimer(timeValue); 
+    startTimerLine(widthValue); 
+    timeText.textContent = "Time Left"; 
+    next_btn.classList.remove("show");
 }
 
 // if quitQuiz button clicked
@@ -91,14 +91,14 @@ next_btn.onclick = ()=>{
 function showQuetions(index){
     const question_text = document.querySelector(".question_text");
 
-    //creating a new span and div tag for question and option and passing the value using array index
+    //create a new span and div tag for questions and option and passing the value using array index
     let question_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
     let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
-    question_text.innerHTML = question_tag; //adding new span tag inside que_tag
-    option_list.innerHTML = option_tag; //adding new div tag inside option_tag
+    question_text.innerHTML = question_tag;
+    option_list.innerHTML = option_tag;
     
     const option = option_list.querySelectorAll(".option");
 
@@ -150,15 +150,15 @@ function showResult(){
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 3){ 
         
-        let scoreTag = '<span>and congrats! , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>,excellent! , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag; 
     }
     else if(userScore > 1){ 
-        let scoreTag = '<span>and great , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>,fair , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else{ 
-        let scoreTag = '<span>and sorry , You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>below average try again , You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
 }
